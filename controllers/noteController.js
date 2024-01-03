@@ -129,7 +129,6 @@ exports.shareNote = async (req, res, next) => {
     const { userId } = req.body;
     
     // Check if the note exists
-    console.log(id)
     const note = await Note.findById(id);
     if (!note) {
       return res.status(404).json({ message: 'Note not found' });
