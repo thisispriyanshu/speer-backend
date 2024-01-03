@@ -6,6 +6,9 @@ const noteSchema = new mongoose.Schema({
   creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
+// Create a compound text index on title and description
+noteSchema.index({ title: 'text', description: 'text' });
+
 const Note = mongoose.model('Note', noteSchema);
 
 module.exports = Note;

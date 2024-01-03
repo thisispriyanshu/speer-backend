@@ -1,6 +1,7 @@
 const Note = require('../models/Note');
 const User = require('../models/User');
 const SharedNote = require('../models/SharedNote');
+const mongoose = require('mongoose');
 
 
 // Get all notes

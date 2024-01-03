@@ -6,6 +6,9 @@ const router = express.Router();
 // Get all notes
 router.get('/', noteController.getAllNotes);
 
+// Search for notes based on keywords
+router.get('/search', noteController.searchNotes);
+
 // Get a note by ID
 router.get('/:id', noteController.getNoteById);
 
@@ -21,7 +24,6 @@ router.delete('/:id', noteController.deleteNote);
 // Share a note with another user
 router.post('/share/:id', noteController.shareNote);
 
-// Search for notes based on keywords
-router.get('/search', noteController.searchNotes);
+
 
 module.exports = router;
